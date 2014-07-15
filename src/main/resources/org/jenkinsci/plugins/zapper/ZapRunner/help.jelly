@@ -1,0 +1,5 @@
+<div>
+    The Zapper plugin helps to run OWASP ZAP as part of your automated security assessment regime in the Jenkins continuous
+    integration system. The plugin can use a pre-installed version of ZAP when given the path to the ZAP installation.
+    Alternatively, it can automatically download and build a version of ZAP to be used by your security tests.
+</div>

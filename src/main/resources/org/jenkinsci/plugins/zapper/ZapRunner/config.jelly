@@ -1,0 +1,23 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <f:entry title="Hostname with optional port" field="host">
+    <f:textbox default="${descriptor.getDefaultHost()}"/>
+  </f:entry>
+
+
+  <f:radioBlock name="zapInstallDescription" value="auto" title="${%Automatically build ZAP}"
+  checked="${instance.getZapInstallType().equals('auto')}">
+      <f:entry title="${%OWASP ZAP Repository}" field="repositoryURL">
+        <f:textbox default="${descriptor.getDefaultRepository()}"
+                   value="${instance.getZapInstallDescription().getRepositoryURL()}"/>
+      </f:entry>
+   </f:radioBlock>
+
+
+  <f:radioBlock name="zapInstallDescription" value="manual" title="${%Specify ZAP location on filesystem}"
+  checked="${instance.getZapInstallType().equals('manual')}">
+      <f:entry title="${%Path to ZAP}" field="path">
+        <f:textbox default="${descriptor.getDefaultPath()}" value="${instance.getZapInstallDescription().getPath()}" />
+      </f:entry>
+   </f:radioBlock>
+
+</j:jelly>
