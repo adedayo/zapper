@@ -5,7 +5,6 @@
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
         <version>1.554.3</version>
-        <!-- which version of Jenkins is this plugin built against? Users must have at least this Jenkins version to use this plugin. -->
     </parent>
 
     <artifactId>zapper</artifactId>
