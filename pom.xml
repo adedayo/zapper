@@ -8,18 +8,12 @@
         <!-- which version of Jenkins is this plugin built against? Users must have at least this Jenkins version to use this plugin. -->
     </parent>
 
-    <developers>
-        <developer>
-            <id>dayo</id>
-            <name>Adedayo Adetoye</name>
-            <email>dayo.dev@gmail.com</email>
-        </developer>
-    </developers>
-
-    <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>zapper</artifactId>
     <version>1.0.0</version>
     <packaging>hpi</packaging>
+    <name>Jenkins OWASP ZAP Plugin</name>
+    <description>Runs, after optionally building, OWASP ZAP for your automated security assessment</description>
+    <url>http://wiki.jenkins-ci.org/display/JENKINS/Zapper+Plugin</url>
 
     <licenses>
         <license>
@@ -27,6 +21,14 @@
             <url>http://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
+
+    <developers>
+        <developer>
+            <id>adedayo</id>
+            <name>Adedayo Adetoye</name>
+            <email>dayo.dev@gmail.com</email>
+        </developer>
+    </developers>
 
     <repositories>
         <repository>
@@ -67,4 +69,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <scm>
+        <connection>scm:git:https://github.com/adedayo/zapper.git</connection>
+        <developerConnection>scm:git:git@github.com:adedayo/zapper.git</developerConnection>
+        <url>https://github.com/adedayo/zapper</url>
+    </scm>
+
 </project>
