@@ -7,16 +7,23 @@ import org.kohsuke.stapler.DataBoundConstructor;
  */
 public class ZapInstallDescription {
 
+    //Install type ("auto" means automatically download and compile ZAP, otherwise an installed ZAP location is provided)
     private final String type;
+    //ZAP install path
     private final String path;
+    //ZAP source repository
     private final String repositoryURL;
+    //Local path to checkout ZAP source to
+    private final String sourcePath;
+
 
     @DataBoundConstructor
     public ZapInstallDescription(String value, String path,
-                                 String repositoryURL) {
+                                 String repositoryURL, String sourcePath) {
         this.type = value;
         this.path = path;
         this.repositoryURL = repositoryURL;
+        this.sourcePath = sourcePath;
     }
 
     public String getType() {
@@ -29,5 +36,9 @@ public class ZapInstallDescription {
 
     public String getRepositoryURL() {
         return repositoryURL;
+    }
+
+    public String getSourcePath() {
+        return sourcePath;
     }
 }

@@ -10,6 +10,10 @@
         <f:textbox default="${descriptor.getDefaultRepository()}"
                    value="${instance.getZapInstallDescription().getRepositoryURL()}"/>
       </f:entry>
+      <f:entry title="${%Local path to be used for ZAP checkout}" field="sourcePath">
+              <f:textbox default="${descriptor.getDefaultSourcePath()}"
+                         value="${instance.getZapInstallDescription().getSourcePath()}"/>
+            </f:entry>
    </f:radioBlock>
 
 

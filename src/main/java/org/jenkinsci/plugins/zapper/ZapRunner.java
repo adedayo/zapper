@@ -79,8 +79,8 @@ public class ZapRunner extends Builder {
             }
 
             //Checkout ZAP
-            new File("zapSource").mkdir();
-            File source = new File("zapSource");
+            new File(zapInstallDescription.getSourcePath()).mkdir();
+            File source = new File(zapInstallDescription.getSourcePath());
             checkout(zapInstallDescription.getRepositoryURL(), source, logger);
 
             //Build ZAP
@@ -189,7 +189,7 @@ public class ZapRunner extends Builder {
          *
          * @param value This parameter receives the value that the user has typed.
          * @return Indicates the outcome of the validation. This is sent to the browser.
-         *
+         * <p/>
          * Note that returning {@link FormValidation#error(String)} does not
          * prevent the form from being saved. It just means that a message
          * will be displayed to the user.
@@ -226,11 +226,15 @@ public class ZapRunner extends Builder {
         }
 
         public String getDefaultRepository() {
-            return "http://zaproxy.googlecode.com/svn/trunk/";
+            return "https://github.com/adedayo/owasp-zaproxy.git/trunk";
         }
 
         public String getDefaultPath() {
             return System.getProperty("user.dir");
+        }
+
+        public String getDefaultSourcePath() {
+            return "zapSource";
         }
 
     }
