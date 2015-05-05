@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>zapper</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <name>Jenkins OWASP ZAP Plugin</name>
     <description>Runs, after optionally building, OWASP ZAP for your automated security assessment</description>
