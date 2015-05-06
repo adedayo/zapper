@@ -79,7 +79,7 @@ public class ZapRunner extends Builder {
             }
 
             //Checkout ZAP
-            new File(zapInstallDescription.getSourcePath()).mkdir();
+            boolean created  = new File(zapInstallDescription.getSourcePath()).mkdir();
             File source = new File(zapInstallDescription.getSourcePath());
             checkout(zapInstallDescription.getRepositoryURL(), source, logger);
 
@@ -233,7 +233,7 @@ public class ZapRunner extends Builder {
         }
 
         public String getDefaultSourcePath() {
-            return "zapSource";
+            return System.getProperty("user.dir") + File.separator + "zapSource";
         }
 
     }
