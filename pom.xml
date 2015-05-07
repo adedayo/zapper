@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>zapper</artifactId>
-    <version>1.0.6-SNAPSHOT</version>
+    <version>1.0.6</version>
     <packaging>hpi</packaging>
     <name>Jenkins OWASP ZAP Plugin</name>
     <description>Runs, after optionally building, OWASP ZAP for your automated security assessment</description>
@@ -72,6 +72,7 @@
         <connection>scm:git:https://github.com/adedayo/zapper.git</connection>
         <developerConnection>scm:git:git@github.com:adedayo/zapper.git</developerConnection>
         <url>https://github.com/adedayo/zapper</url>
-    </scm>
+      <tag>zapper-1.0.6</tag>
+  </scm>
 
 </project>
